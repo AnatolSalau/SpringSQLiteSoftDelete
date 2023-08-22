@@ -1,0 +1,24 @@
+spring:
+   jpa:
+      hibernate:
+         ddl-auto: update
+      properties:
+         hibernate:
+            show_sql: true
+            format_sql: true
+   flyway:
+      enabled: true
+      validate-on-migrate: true
+   sql:
+      init:
+         mode: always
+   datasource:
+      url: jdbc:sqlite:src/main/resources/db/database.sqlite
+      driver-class-name: org.sqlite.JDBC
+logging:
+   level:
+      org:
+         springframework:
+            security: DEBUG
+server:
+   port: 8080
